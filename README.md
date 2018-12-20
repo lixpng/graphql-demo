@@ -22,5 +22,5 @@ sudo docker-compose up
 打开 `http://localhost:8080/graphql` 就能看到 `GraphQL` 的交互式调试器了
 
 #### 注意
-其中 `wait-for-it.sh` 来自 https://github.com/vishnubob/wait-for-it，是为了保证 `Graphql` 服务在 `mongodb` 服务启动之后再启动
+其中 `wait-for-it.sh` 来自 https://github.com/vishnubob/wait-for-it ， 是为了保证 `Graphql` 服务在 `mongodb` 服务启动之后再启动
 
