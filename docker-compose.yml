@@ -1,0 +1,18 @@
+version: '3'
+services: 
+  graphql_demo_service:
+    build: .
+    command: ["./wait-for-it.sh", "graphql_demo_mongodb:27017", "--", "supervisor", "index.js"]
+    volumes: 
+      - ./:/app
+    # restart: always
+    ports: 
+      - "80:8080"
+    container_name: graphql_demo
+  graphql_demo_mongodb:
+    image: "mongo"
+    command: ['mongod']
+    ports:
+      - "29510:27017"
+    volumes:
+      - "/data/graphql_demo/db:/data/db"
